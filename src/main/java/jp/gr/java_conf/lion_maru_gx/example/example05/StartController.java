@@ -6,8 +6,13 @@ import javafx.fxml.FXML;
 public class StartController extends Controller {
 
     @FXML
-    protected void handlePage1ButtonAction() {
-        nextPage( App.Page.Page1);
+    protected void handleVoiceModeButtonAction() {
+        nextPage( App.Page.VoiceMode);
+    }
+
+    @FXML
+    protected void handlePerformanceModeButtonAction() {
+        nextPage( App.Page.PerformanceMode);
     }
 
     @FXML
