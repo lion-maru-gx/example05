@@ -5,7 +5,7 @@
 
 <VBox alignment="CENTER" minHeight="600.0" minWidth="800.0" spacing="10.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jp.gr.java_conf.lion_maru_gx.example.example05.StartController">
    <children>
-      <Button minHeight="40.0" minWidth="200.0" mnemonicParsing="false" onAction="#handleVoiceModeButtonAction" text="ボイスモード" />
+      <Button minHeight="40.0" minWidth="200.0" mnemonicParsing="false" onAction="#handleVoiceModeButtonAction" text="シングルモード" />
       <Button minHeight="40.0" minWidth="200.0" mnemonicParsing="false" onAction="#handlePerformanceModeButtonAction" text="パフォーマンスモード" />
       <Button minHeight="40.0" minWidth="200.0" mnemonicParsing="false" onAction="#handleSystemButtonAction" text="システム設定" />
       <Button minHeight="40.0" minWidth="200.0" mnemonicParsing="false" onAction="#handleEndButtonAction" text="終了" />

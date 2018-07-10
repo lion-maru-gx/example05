@@ -29,7 +29,7 @@ public class App extends Application {
 
 	public static enum Page {
 		Start("start.fxml"), VoiceMode("VoiceMode.fxml"), VoiceEdit("VoiceEdit.fxml"), PerformanceMode(
-				"PerformanceMode"), PerformanceEdit("PerformanceEdit"), System("System.fxml");
+				"PerformanceMode.fxml"), PerformanceEdit("PerformanceEdit.fxml"), System("System.fxml");
 
 		// フィールドを定義
 		private String url;
@@ -98,7 +98,8 @@ public class App extends Application {
 	}
 
 	public void prevPage() {
-		this.setPage(pageStack.pop().url);
+		currPage = pageStack.pop();
+		this.setPage(currPage.url);
 	}
 
 	/**
