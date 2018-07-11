@@ -3,6 +3,7 @@ package jp.gr.java_conf.lion_maru_gx.example.example05;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -109,10 +110,13 @@ public class VoiceModeController extends Controller implements Initializable {
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		buttonList= new Button[]{
 				button0,button1,button2,button3,button4,button5,button6,button7,button8,button9,
-				button0,button11,button12,button13,button14,button15,button16,button17,button18,button19,
-				button0,button21,button22,button23,button24,button25,button26,button27,button28,button29,
-				button0,button31,button32,button33,button34,button35,button36,button37,button38,button39,
-				button0,button41,button42,button43,button44,button45,button46,button47};
+				button10,button11,button12,button13,button14,button15,button16,button17,button18,button19,
+				button20,button21,button22,button23,button24,button25,button26,button27,button28,button29,
+				button30,button31,button32,button33,button34,button35,button36,button37,button38,button39,
+				button40,button41,button42,button43,button44,button45,button46,button47};
+		for(int i=0;i<buttonList.length;i++){
+			buttonList[i].setText(String.valueOf(i+1)+" : VoiceName"+String.valueOf(i+1));
+		}
 	}
 
 	@FXML
@@ -124,6 +128,22 @@ public class VoiceModeController extends Controller implements Initializable {
 	@FXML
     protected void handlePrevButtonAction(){
         prevPage();
+    }
+
+	private Button oldTest=null;
+	@FXML
+    protected void handleSelectButtonAction(ActionEvent event){
+    	Button test = (Button)event.getSource();
+		if(oldTest !=null){
+			oldTest.setStyle("");
+		}
+    	for(int i=0;i<buttonList.length;i++){
+    		if(test.equals(buttonList[i])){
+    			test.setStyle("-fx-base: #f4f162");
+    			oldTest = test;
+    			System.out.println(i);
+    		}
+    	}
     }
 
 
